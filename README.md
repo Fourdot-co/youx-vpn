@@ -9,14 +9,15 @@
 
 | Платформа | Файл | Размер | Требования |
 |---|---|---|---|
-| Windows | `YouX-VPN-1.3.0.msi` | ~125 МБ | Windows 10/11, 64-бит |
-| Android | `YouX-VPN-1.3.0.apk` | 20 МБ | Android 8.0 и новее |
-| Linux | `YouX-VPN-1.3.0-amd64.deb` | 116 МБ | Ubuntu 22.04+ / Debian 12+, 64-бит |
+| Windows | **[Скачать `YouX-VPN-1.3.0.msi`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.0/YouX-VPN-1.3.0.msi)** | 126 МБ | Windows 10/11, 64-бит |
+| Android | **[Скачать `YouX-VPN-1.3.0.apk`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.0/YouX-VPN-1.3.0.apk)** | 20 МБ | Android 8.0 и новее |
+| Linux | **[Скачать `YouX-VPN-1.3.0-amd64.deb`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.0/YouX-VPN-1.3.0-amd64.deb)** | 116 МБ | Ubuntu 22.04+ / Debian 12+, 64-бит |
 
-Все файлы — на вкладке [Releases](../../releases/latest). Java и другие зависимости
-ставить не нужно: всё необходимое уже внутри пакета.
+Ссылки ведут прямо на файл — заходить на вкладку [Releases](../../releases/latest) не нужно.
+Java и другие зависимости ставить не требуется: всё необходимое уже внутри пакета.
 
-**Проверка целостности.** Рядом с файлами лежит `SHA256SUMS.txt`. Сверить:
+**Проверка целостности.** Рядом с файлами лежит
+[`SHA256SUMS.txt`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.0/SHA256SUMS.txt). Сверить:
 
 ```bash
 sha256sum -c SHA256SUMS.txt          # Linux

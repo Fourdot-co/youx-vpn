@@ -5,25 +5,25 @@
 
 Здесь публикуются готовые дистрибутивы. Исходный код закрыт.
 
-## Скачать — версия 1.3.0
+## Скачать — версия 1.3.1
 
 | Платформа | Файл | Размер | Требования |
 |---|---|---|---|
-| Windows | **[Скачать `YouX-VPN-1.3.0.msi`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.0/YouX-VPN-1.3.0.msi)** | 126 МБ | Windows 10/11, 64-бит |
-| Android | **[Скачать `YouX-VPN-1.3.0.apk`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.0/YouX-VPN-1.3.0.apk)** | 20 МБ | Android 8.0 и новее |
-| Linux | **[Скачать `YouX-VPN-1.3.0-amd64.deb`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.0/YouX-VPN-1.3.0-amd64.deb)** | 116 МБ | Ubuntu 22.04+ / Debian 12+, 64-бит |
+| Windows | **[Скачать `YouX-VPN-1.3.1.msi`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.1/YouX-VPN-1.3.1.msi)** | 126 МБ | Windows 10/11, 64-бит |
+| Android | **[Скачать `YouX-VPN-1.3.1.apk`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.1/YouX-VPN-1.3.1.apk)** | 20 МБ | Android 8.0 и новее |
+| Linux | **[Скачать `YouX-VPN-1.3.1-amd64.deb`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.1/YouX-VPN-1.3.1-amd64.deb)** | 116 МБ | Ubuntu 22.04+ / Debian 12+, 64-бит |
 
 Ссылки ведут прямо на файл — заходить на вкладку [Releases](../../releases/latest) не нужно.
 Java и другие зависимости ставить не требуется: всё необходимое уже внутри пакета.
 
 **Проверка целостности.** Рядом с файлами лежит
-[`SHA256SUMS.txt`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.0/SHA256SUMS.txt). Сверить:
+[`SHA256SUMS.txt`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.3.1/SHA256SUMS.txt). Сверить:
 
 ```bash
 sha256sum -c SHA256SUMS.txt          # Linux
 ```
 ```powershell
-Get-FileHash "YouX-VPN-1.3.0.msi" -Algorithm SHA256   # Windows
+Get-FileHash "YouX-VPN-1.3.1.msi" -Algorithm SHA256   # Windows
 ```
 
 Сверять стоит не для формальности: APK ставится мимо магазина, и совпадение суммы —
@@ -51,7 +51,7 @@ Get-FileHash "YouX-VPN-1.3.0.msi" -Algorithm SHA256   # Windows
 
 ### Linux
 ```bash
-sudo apt install ./YouX-VPN-1.3.0-amd64.deb
+sudo apt install ./YouX-VPN-1.3.1-amd64.deb
 ```
 Запуск — из меню приложений или командой `/opt/youx-vpn/bin/"YouX VPN"`.
 При первом подключении менеджер политик (polkit) один раз спросит пароль — так

@@ -5,25 +5,25 @@
 
 Здесь публикуются готовые дистрибутивы. Исходный код закрыт.
 
-## Скачать — версия 1.4.0
+## Скачать — версия 1.4.1
 
 | Платформа | Файл | Размер | Требования |
 |---|---|---|---|
-| Windows | **[Скачать `YouX-VPN-1.4.0.msi`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.4.0/YouX-VPN-1.4.0.msi)** | 126 МБ | Windows 10/11, 64-бит |
-| Android | **[Скачать `YouX-VPN-1.4.0.apk`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.4.0/YouX-VPN-1.4.0.apk)** | 20 МБ | Android 8.0 и новее |
-| Linux | **[Скачать `YouX-VPN-1.4.0-amd64.deb`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.4.0/YouX-VPN-1.4.0-amd64.deb)** | 116 МБ | Ubuntu 22.04+ / Debian 12+, 64-бит |
+| Windows | **[Скачать `YouX-VPN-1.4.1.msi`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.4.1/YouX-VPN-1.4.1.msi)** | 126 МБ | Windows 10/11, 64-бит |
+| Android | **[Скачать `YouX-VPN-1.4.1.apk`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.4.1/YouX-VPN-1.4.1.apk)** | 20 МБ | Android 8.0 и новее |
+| Linux | **[Скачать `YouX-VPN-1.4.1-amd64.deb`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.4.1/YouX-VPN-1.4.1-amd64.deb)** | 116 МБ | Ubuntu 22.04+ / Debian 12+, 64-бит |
 
 Ссылки ведут прямо на файл — заходить на вкладку [Releases](../../releases/latest) не нужно.
 Java и другие зависимости ставить не требуется: всё необходимое уже внутри пакета.
 
 **Проверка целостности.** Рядом с файлами лежит
-[`SHA256SUMS.txt`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.4.0/SHA256SUMS.txt). Сверить:
+[`SHA256SUMS.txt`](https://github.com/Fourdot-co/youx-vpn/releases/download/v1.4.1/SHA256SUMS.txt). Сверить:
 
 ```bash
 sha256sum -c SHA256SUMS.txt          # Linux
 ```
 ```powershell
-Get-FileHash "YouX-VPN-1.4.0.msi" -Algorithm SHA256   # Windows
+Get-FileHash "YouX-VPN-1.4.1.msi" -Algorithm SHA256   # Windows
 ```
 
 Сверять стоит не для формальности: APK ставится мимо магазина, и совпадение суммы —
@@ -51,7 +51,7 @@ Get-FileHash "YouX-VPN-1.4.0.msi" -Algorithm SHA256   # Windows
 
 ### Linux
 ```bash
-sudo apt install ./YouX-VPN-1.4.0-amd64.deb
+sudo apt install ./YouX-VPN-1.4.1-amd64.deb
 ```
 Запуск — из меню приложений или командой `/opt/youx-vpn/bin/"YouX VPN"`.
 При первом подключении менеджер политик (polkit) один раз спросит пароль — так
@@ -61,12 +61,13 @@ sudo apt install ./YouX-VPN-1.4.0-amd64.deb
 
 - **AmneziaWG 2.0** — основной протокол. Это не обычный WireGuard: трафик маскируется
   набором параметров обфускации, чтобы его не отсекала фильтрация по сигнатуре протокола.
-- **VLESS** — второй протокол. В первую очередь приложение подключается к обычному
-  VLESS-серверу — без лимита трафика. Для сетей с «белыми списками», где заблокировано
-  почти всё, кроме нескольких разрешённых сервисов, есть запасной путь через сеть
-  доставки контента (CDN): приложение само распределяет трафик между несколькими
-  точками входа и переключается на резервные, если основная перестала отвечать. Путь
-  через CDN — с ежемесячным лимитом трафика и возможностью докупить объём.
+- **VLESS** — второй протокол. В списке локаций у него два вида пунктов:
+  «· безлимит» — обычный VLESS-сервер без лимита трафика, и «· БС (лимит)» — для сетей
+  с «белыми списками», где заблокировано почти всё, кроме нескольких разрешённых
+  сервисов. Пункты «БС» идут через сеть доставки контента (CDN): приложение само
+  распределяет трафик между несколькими точками входа и переключается на резервные,
+  если основная перестала отвечать. У них ежемесячный лимит трафика, объём можно
+  докупить.
 - **Исключения VPN** (раздельное туннелирование) — выбранные программы ходят мимо VPN,
   либо наоборот: через VPN идут только они. Работает на Android и Windows. На Windows
   приложение опознаётся по пути к файлу программы, а не по имени процесса.
